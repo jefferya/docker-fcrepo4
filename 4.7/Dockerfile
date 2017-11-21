@@ -1,6 +1,6 @@
 FROM tomcat:8.5
 
-ENV FCREPO_VERSION 4.7.3
+ENV FCREPO_VERSION 4.7.4
 
 # Configuration for Fedora: https://wiki.duraspace.org/display/FEDORA47/Application+Configuration
 ENV JAVA_OPTS="${JAVA_OPTS} -Dfcrepo.modeshape.configuration=classpath:/config/file-simple/repository.json -Dfcrepo.home=/fcrepo4-data"
