@@ -14,7 +14,6 @@ ENV JAVA_OPTS="${JAVA_OPTS} \
   -Dfcrepo.log.totalSizeCap=100000 \
   -Dfcrepo.modeshape.configuration=classpath:/config/minimal-default/repository.json \
   -Dfcrepo.modeshape.index.directory=/fcrepo4-data/modeshape.index \
-  -Dfcrepo.node-types.ual=classpath:/config/minimal-default/node-types_ual.cnd \
   -Dfcrepo.home=/fcrepo4-data \
 "
 
