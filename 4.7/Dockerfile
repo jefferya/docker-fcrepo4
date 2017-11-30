@@ -9,6 +9,7 @@ ENV FCREPO_VERSION 4.7.4.1
 ENV JAVA_OPTS="${JAVA_OPTS} \
   -Dlogback.configurationFile=classpath:/logback.xml \
   -Dfcrepo.log=DEBUG \
+  -Dfcrepo.log.jcr=DEBUG \
   -Dfcrepo.log.directory=${CATALINA_HOME}/logs \
   -Dfcrepo.log.maxHistory=14 \
   -Dfcrepo.log.totalSizeCap=100000 \
