@@ -1,6 +1,6 @@
 FROM tomcat:8.5
 
-ENV FCREPO_VERSION 4.7.4.1
+ENV FCREPO_VERSION 4.7.4.2
 
 # Configuration for Fedora: 
 #   https://wiki.duraspace.org/display/FEDORA47/Application+Configuration
