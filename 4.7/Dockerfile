@@ -3,7 +3,7 @@ FROM tomcat:8.5
 ENV FCREPO_VERSION 4.7.4.2
 
 # add authentication credentials to Tomcat for Fcrepo
-UN sed -i '$i<role rolename="fedoraAdmin"/><user username="fedoraAdmin" password="fedoraAdmin" roles="fedoraAdmin"/>' /usr/local/tomcat/conf/tomcat-users.xml
+RUN sed -i '$i<role rolename="fedoraAdmin"/><user username="fedoraAdmin" password="fedoraAdmin" roles="fedoraAdmin"/>' /usr/local/tomcat/conf/tomcat-users.xml
 
 # Configuration for Fedora: 
 #   https://wiki.duraspace.org/display/FEDORA47/Application+Configuration
