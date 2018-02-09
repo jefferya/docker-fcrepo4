@@ -1,11 +1,14 @@
 FROM tomcat:8.5
 
-ENV FCREPO_VERSION 4.7.4.2
+ENV FCREPO_VERSION 4.7.4.3
 
 # add authentication credentials to Tomcat for Fcrepo
 RUN sed -i '$i<role rolename="fedoraAdmin"/><user username="fedoraAdmin" password="fedoraAdmin" roles="fedoraAdmin"/>' /usr/local/tomcat/conf/tomcat-users.xml
 
 # Configuration for Fedora: 
+#   * performance enchancements: `-Dfcrepo.streaming.parallel=true`
+#   * performance enchancements: `-Dfcrepo.modeshape.configuration` - `cacheSize` and ModeShape indexing
+#     https://wiki.duraspace.org/display/FF/Fedora+4.7.4+Release+Notes
 #   https://wiki.duraspace.org/display/FEDORA47/Application+Configuration
 #   https://wiki.duraspace.org/display/FEDORA45/Configuring+Logging+With+System+Properties
 #   https://wiki.duraspace.org/display/FEDORA4x/Best+Practices+-+Fedora+Configuration
